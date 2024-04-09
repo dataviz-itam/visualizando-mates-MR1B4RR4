@@ -18,6 +18,6 @@
 </head>
 <body>
 <canvas id="myCanvas" width="500" height="500"></canvas>
-<script src="irracional_numbers.js"></script>
+<script src="pruebas.js"></script>
 </body>
 </html>
