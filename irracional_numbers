@@ -1,21 +1,3 @@
-// Get the canvas element
-var canvas = document.getElementById("myCanvas");
-
-// Set the canvas size to full screen
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Get the drawing context
-var ctx = canvas.getContext("2d");
-
-// Flip the y-axis and move the origin to lower left corner
-ctx.scale(1, -1);
-ctx.translate(0, -canvas.height);
-
-//Fill the canvas with dark gray:
-ctx.fillStyle = "#222";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-
 class Visualizer {
     constructor(canvasId, options) {
         this.canvas = document.getElementById(canvasId);
