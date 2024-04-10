@@ -6,7 +6,7 @@ class Visualizer {
         this.digitsIndex = 0;
         this.piDigits = this.options.piDigits;
         this.lastAnimationFrameTime = 0;
-        this.animationSpeed = 100;
+        this.animationSpeed = 150;
         this.sounds = {};
         this.loadSounds();
     }
