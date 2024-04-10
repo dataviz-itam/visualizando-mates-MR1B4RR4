@@ -7,6 +7,8 @@ class Visualizer {
         this.piDigits = this.options.piDigits;
         this.lastAnimationFrameTime = 0;
         this.animationSpeed = 100;
+        this.sounds = {};
+        this.loadSounds();
     }
 
     clearCanvas() {
@@ -64,6 +66,13 @@ class Visualizer {
         this.ctx.restore();
     }
 
+    loadSounds() {
+        for (let i = 0; i <= 9; i++) {
+            const sound = new Audio(`path/to/${i}.mp3`); // Asegúrate de usar el path correcto a tus archivos de sonido
+            this.sounds[i] = sound;
+        }
+    }
+
     animatePiDigits(timestamp) {
         if (this.digitsIndex >= this.piDigits.length - 1) {
             return; // Detener la animación cuando se hayan dibujado todas las líneas
@@ -92,6 +101,9 @@ class Visualizer {
             this.ctx.moveTo(from.x, from.y);
             this.ctx.lineTo(to.x, to.y);
             this.ctx.stroke();
+            
+            // Reproduce el sonido
+            this.playSoundForDigit(toDigit); 
 
             this.digitsIndex++; // Mover al siguiente par de dígitos
         }
@@ -99,7 +111,13 @@ class Visualizer {
         // Llamar a animatePiDigits de nuevo para intentar dibujar la siguiente línea
         requestAnimationFrame(this.animatePiDigits.bind(this));
     }
-    
+
+    playSoundForDigit(digit) {
+        if (this.sounds[digit]) {
+            this.sounds[digit].currentTime = 0; // Reiniciar el sonido si ya estaba reproduciéndose
+            this.sounds[digit].play();
+        }
+    }
 }
 
 // Usage remains the same
