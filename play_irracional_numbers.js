@@ -68,7 +68,6 @@ class Visualizer {
 
     loadSounds() {
         const baseURL = 'https://github.com/dataviz-itam/visualizando-mates-MR1B4RR4';
-        // Asegúrate de reemplazar 'usuario', 'repositorio', 'rama', y 'path/to/sounds/' con tus datos reales
     
         for (let i = 0; i <= 9; i++) {
             const soundURL = `${baseURL}${i}.mp3`; // Construye la URL completa para cada archivo de sonido

@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-<canvas id="myCanvas" width="500" height="500"></canvas>
-<script src="play_irracional_numbers.js"></script>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
 </body>
+<script src="play_irracional_numbers.js"></script>
 </html>
