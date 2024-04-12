@@ -18,49 +18,26 @@
     </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="500" height="500"></canvas>
-<<<<<<< HEAD:index
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-=======
-    <button id="playButton">Iniciar Animación</button>
->>>>>>> f6e395f726ae2f3e4ed316b7ff3d506968966280:index.html
+    <header>
+        <h1>Visualizador de Dígitos</h1>
+        <p>Esta animación representa visualmente los dígitos de algunos números importantes, <br>
+             con diferentes colores y sonidos para cada dígito.</p>
+    </header>
+    <div>
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+    </div>
+    <footer>
+        <select id="configSelect">
+            <option value="default">Pi - Default</option>
+            <option value="tau">Tau (τ)</option>
+            <option value="e">Euler's Number (e)</option>
+            <option value="phi">Golden Ratio (φ)</option>
+            <option value="natural">Natural numbers (ℕ)</option>
+            <option value="fun">Special fun Value</option>
+        </select>
+        <button id="playButton">Reproducir</button>
+        <button id="stopButton">Detener</button>
+    <footer>
 </body>
 <script src="play_irracional_numbers.js"></script>
 </html>
