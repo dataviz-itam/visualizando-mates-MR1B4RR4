@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Visualizador de Dígitos</h1>
+        <p>Esta animación representa visualmente los dígitos de algunos números importantes, <br>
+             con diferentes colores y sonidos para cada dígito.</p>
+    </header>
+    <div>
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+    </div>
+    <footer>
+        <select id="configSelect">
+            <option value="default">Pi - Default</option>
+            <option value="tau">Tau (τ)</option>
+            <option value="e">Euler's Number (e)</option>
+            <option value="phi">Golden Ratio (φ)</option>
+            <option value="natural">Natural numbers (ℕ)</option>
+            <option value="fun">Special fun Value</option>
+        </select>
+        <button id="playButton">Reproducir</button>
+        <button id="stopButton">Detener</button>
+    <footer>
+</body>
+<script src="play_irracional_numbers.js"></script>
+</html>

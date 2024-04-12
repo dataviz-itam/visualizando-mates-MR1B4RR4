@@ -1,0 +1,61 @@
+html,
+body {
+    font-family: Arial, sans-serif; /* Establece una fuente general para la página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+
+canvas {
+    border: 1px solid black; /* Añade un borde al canvas para que sea más visible */
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#playButton {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de detener */
+#stopButton {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos comunes para todos los botones si es necesario */
+button {
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555; /* Oscurece el botón cuando se pasa el mouse */
+}
