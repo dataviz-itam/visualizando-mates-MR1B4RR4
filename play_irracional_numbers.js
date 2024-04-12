@@ -67,8 +67,7 @@ class Visualizer {
     }
 
     loadSounds() {
-        const baseURL = 'https://github.com/dataviz-itam/visualizando-mates-MR1B4RR4';
-        // Asegúrate de reemplazar 'usuario', 'repositorio', 'rama', y 'path/to/sounds/' con tus datos reales
+        const baseURL = 'https://github.com/MR1B4RR4/visualizando-mates-directors-cut/blob/main/';
     
         for (let i = 0; i <= 9; i++) {
             const soundURL = `${baseURL}${i}.mp3`; // Construye la URL completa para cada archivo de sonido
@@ -82,6 +81,12 @@ class Visualizer {
             this.sounds[digit].currentTime = 0; // Reiniciar el sonido si ya estaba reproduciéndose
             this.sounds[digit].play();
         }
+    }
+
+    setupAnimationStart() {
+        document.getElementById('playButton').addEventListener('click', () => {
+            this.animatePiDigits(0); // Empezar la animación con timestamp 0
+        });
     }
 
     animatePiDigits(timestamp) {
