@@ -6,7 +6,7 @@ class Visualizer {
         this.setupOptions();
         this.digitsIndex = 0;
         this.lastAnimationFrameTime = 0;
-        this.animationSpeed = 150;
+        this.animationSpeed = 200;
         this.sounds = {};
         this.loadSounds();
         this.animationFrameId = null;
